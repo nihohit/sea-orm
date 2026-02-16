@@ -40,14 +40,14 @@ where
 }
 
 /// Topology of multi-joins
-pub trait Topology {}
+pub trait Topology: Clone {}
 
 /// A star topology
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct TopologyStar;
 
 /// A chain topology
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct TopologyChain;
 
 impl Topology for TopologyStar {}
